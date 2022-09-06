@@ -8,11 +8,19 @@ namespace Escola.Domain.Models
 {
     public class Boletim
     {
+
+        public Boletim()
+        {
+
+        }
+
         public Guid Id { get; set; } = Guid.NewGuid();
-        public int AlunoId { get; set; }
+        public Guid AlunoId { get; set; }
 
         public Aluno Aluno { get; set; }
 
-        public List<Materia> Materias { get; set; }
+        public bool Aprovado { get; set; }
+
+        public List<NotasMateria> NotasMateria { get; set; }
     }
 }
